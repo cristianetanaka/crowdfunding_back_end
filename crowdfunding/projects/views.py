@@ -37,4 +37,8 @@ class ProjectDetail(APIView):
     def get(self, request, pk):
         project = self.get_object(pk)
         serializer = ProjectSerializer(project)
+<<<<<<< HEAD
         return Response(serializer.data)
+=======
+        return Response(serializer.data)
+>>>>>>> modelrelationstest
