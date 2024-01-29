@@ -5,7 +5,7 @@ class PledgeSerializer(serializers.ModelSerializer):
     supporter = serializers.ReadOnlyField(source='supporter.id')
     class Meta:
         model = Pledge
-        fields = '__all__'
+        fields = '__all__'  # Turns  to Json
 
 class PledgeDetailSerializer(PledgeSerializer):
     def update(self, instance, validated_data):
@@ -18,13 +18,13 @@ class PledgeDetailSerializer(PledgeSerializer):
         return instance
 
 class ProjectSerializer(serializers.ModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.id')
+    owner = serializers.ReadOnlyField(source='owner.id') # gives serializer instructions how to handle user. Users aren't allowed to choose what value they set
     class Meta:
         model = Project
-        fields = '__all__'
+        fields = '__all__' # Turns  to Json
 
 class ProjectDetailSerializer(ProjectSerializer):
-    pledges = PledgeSerializer(many=True, read_only=True)
+    pledges = PledgeSerializer(many=True, read_only=True) #specifies a list of pledges under the project detail
 
     def update(self, instance, validated_data):
         instance.title = validated_data.get('title',instance.title)

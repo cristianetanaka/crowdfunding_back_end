@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model # refers to the user model created, using this function is better than user model itself
 
 # Create your models here.
 class Project(models.Model):
@@ -19,10 +19,10 @@ class Pledge(models.Model):
     amount = models.IntegerField()
     comment = models.CharField(max_length=200)
     anonymous = models.BooleanField()
-    project = models.ForeignKey(
-        'project',
-        on_delete=models.CASCADE,
-        related_name='pledges'
+    project = models.ForeignKey(    # tells Django for each project we need an ID/ also link two models together project and pledges
+        'Project',
+        on_delete=models.CASCADE, # cascade if project gets deleted will dele the pledges
+        related_name='pledges' # associates Pledge to a project model
     )
     
     supporter = models.ForeignKey(

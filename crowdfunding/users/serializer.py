@@ -5,9 +5,9 @@ class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model:CustomUser
         fields = '__all__'
-        extra_kwargs = {'password' : {'write_only':True}}
+        extra_kwargs = {'password' : {'write_only':True}} # tell serializer and extra key word argument extra kwargs and write_only infor how it should be serialized
 
     def create(self, validated_data):
-        return CustomUser.objects.create_user(**validated_data)
+        return CustomUser.objects.create_user(**validated_data) # for password harshing
     
     # if we use custom objects user Django will automaticall harsh the password
