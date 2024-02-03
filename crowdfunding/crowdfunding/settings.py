@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-5b9iisv))=+7xt87phc7+a7+t0e(x%-t=+tv!usa(zikdr4q24'
-SECRET_KEY = os.environ.get(   'DJANGO_SECRET_KEY',   '5*15pt5log&-bjpkqo0117!b!x4do-mgmxvg8n$3016384zz(7')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-5*15pt5log&-bjpkqo0117!b!x4do-mgmxvg8n$3016384zz(7')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
@@ -53,13 +53,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-AUTH_USER_MODEL = 'users.CustomUser'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES' : [
-        'rest_framework.authentication.TokenAuthentication'
+        'rest_framework.authentication.TokenAuthentication',
     ] 
 } # means DRF will use a Token authentication method to uthenticate incoming requests
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
