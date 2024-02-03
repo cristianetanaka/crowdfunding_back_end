@@ -1,5 +1,10 @@
+staticfiles
+
 # Byte-compiled / optimized / DLL files
+venv/*
 __pycache__/
+*.sqlite3
+*.vscode
 *.py[cod]
 *$py.class
 
@@ -108,7 +113,7 @@ ipython_config.py
 #   in version control.
 #   https://pdm.fming.dev/#use-with-ide
 
-
+.pdm.toml
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
@@ -160,10 +165,3 @@ cython_debug/
 #.idea/
 
 # .gitignore
-
-venv/*
-__pycache__
-* .sqlite3
-* .vscode
-
-staticfiles
