@@ -1,12 +1,6 @@
 # fly.toml app configuration file generated for drf-patient-pond-1056 on 2024-01-27T13:12:21+08:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = '# fly.toml app configuration file generated for drf-patient-pond-1056 on 2024-01-27T13:12:21+08:00
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
 
 app = 'cleanfuture'
 primary_region = "syd"
