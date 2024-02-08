@@ -3,7 +3,7 @@ from .models import CustomUser
 
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
-        model:CustomUser
+        model= CustomUser
         fields = '__all__'
         extra_kwargs = {'password' : {'write_only':True}} # tell serializer and extra key word argument extra kwargs and write_only infor how it should be serialized
 

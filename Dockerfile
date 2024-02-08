@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION=3.11-slim-bullseye
+ARG PYTHON_VERSION=3.10-slim-bullseye
 
 FROM python:${PYTHON_VERSION}
 
@@ -14,9 +14,10 @@ RUN set -ex && \
     pip install --upgrade pip && \
     pip install -r /tmp/requirements.txt && \
     rm -rf /root/.cache/
+    
 COPY crowdfunding/ /code
 
-#ENV SECRET_KEY "9ZuiaJZHKCiYvFh2Qy5O5Z75c47Yq6AQuQnn20ul8P6hz4qamG"
+#ENV SECRET_KEY "V351iyhSh54J8f4BIJ60FmID22ykhnZdO9FJPY4eXSEvrAX7Gb"
 RUN python manage.py collectstatic --noinput
 RUN chmod +x /code/run.sh
 

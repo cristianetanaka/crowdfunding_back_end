@@ -1,0 +1,1 @@
+fly volumes create -a clear-future -r syd --size 1 dbvol
