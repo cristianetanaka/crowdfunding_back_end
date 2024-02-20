@@ -80,9 +80,9 @@ Creating a Project
 
 
 ### Insomnia Screenshots
-![GET Request](.Images\Get method projects.png)
-![POST Request](.Images\Post method projects.png) 
-![Token Request](.Images\Token return projects.png)
+![GET Request]![alt text](<Images/Get method projects.png>)
+![POST Request]![alt text](<Images/Post method projects.png>)
+![Token Request]![alt text](<Images/Token return projects.png>)
 
 
 [TBC] Be separated into two distinct projects: an API built using the Django RestFramework and a website built using React.
