@@ -22,6 +22,7 @@ Clean future is for any NGO or those who cares about reducing waste to go on lan
 | /users/1         | PUT    | User Object    | Yes Request user must equal user id | Not working  |
 | /api-token-auth/ | POST   | User           | N/A                                 | Yes          |
 ### DB Schema
+![DB Schema](<Images/DB shema.png>)
 ### Insomnia- How to create Users and Project in Insomnia
 
 Creating a User
